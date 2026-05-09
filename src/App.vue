@@ -6,7 +6,7 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
- <router-view />
+ <Router-view />
 </template>
 
 <style scoped lang="scss">

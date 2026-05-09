@@ -1,8 +1,3 @@
-<script setup>
-import LayoutHeaderUl from './LayoutHeaderUl.vue'
-import HeaderCart from './HeaderCart.vue'
-</script>
-
 <template>
     <header class='app-header'>
         <div class="container">
