@@ -1,13 +1,12 @@
 <script setup>
 import { el } from 'element-plus/es/locale/index.mjs';
+import { RouterView } from 'vue-router';
 
 
 </script>
 
 <template>
-  <div class="test">
-    test scss
-  </div>
+ <router-view />
 </template>
 
 <style scoped lang="scss">
