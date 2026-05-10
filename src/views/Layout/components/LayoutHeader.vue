@@ -1,11 +1,30 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+import { getCategoryAPI } from '@/apis/Layout'
+import { onMounted, ref } from 'vue';
+const CategoryList = ref([])
+const getCategory = async() => {
+    const res = await getCategoryAPI()
+    console.log(res);
+    CategoryList.value = res.result
+}
+onMounted(() => {
+    getCategory()
+})
+
+</script>
+
 <template>
     <header class='app-header'>
         <div class="container">
             <h1 class="logo">
                 <RouterLink to="/">小兔鲜</RouterLink>
             </h1>
-
-            <LayoutHeaderUl />
+            <ul class="app-header-nav">
+                <li class="home" v-for="item in CategoryList" :key="item.id">
+                    <RouterLink to="/"> {{ item.name }} </RouterLink>
+                </li>
+            </ul>
             <div class="search">
                 <i class="iconfont icon-search"></i>
                 <input type="text" placeholder="搜一搜">
