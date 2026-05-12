@@ -10,7 +10,7 @@ export function findNewAPI() {
         url: '/home/new'
     })
 }
-export function findHotAPI() {
+export function getHotAPI() {
     return httpInstance({
         url: '/home/hot'
     })
