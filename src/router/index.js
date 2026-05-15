@@ -32,7 +32,12 @@ const router = createRouter({
         }
       ]
     }
-  ]
+  ],
+  //路由行为配置项
+  scrollBehavior() {
+    //返回顶部
+    return { left: 0, top: 0 }
+  }
 })
 
 export default router
